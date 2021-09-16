@@ -34,8 +34,8 @@ spec:
         image: localhost:32000/nodejs-apps/registry
         imagePullPolicy: Always
         env: 
-          - name: NODE_PORT
-            value: 3000
+        - name: NODE_PORT
+          value: "3000"
         ports:
         - containerPort: 3000
 ---
