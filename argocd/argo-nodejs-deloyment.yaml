@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: nodejs-argo
-        image: localhost:32000/nodejs-apps/registry
+        image: localhost:32000/nodejs-apps2/registry
         imagePullPolicy: Always
         env: 
         - name: NODE_PORT
