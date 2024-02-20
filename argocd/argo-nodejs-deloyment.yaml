@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: nodejs-argo
-        image: yaniemuh19/nodejs-apps:latest
+        image: yaniemuh19/nodejs:dev
         imagePullPolicy: Always
         env: 
         - name: NODE_PORT
