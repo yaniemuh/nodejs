@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: nodejs-argo
-        image: yaniemuh19/nodejs-k8s-example
+        image: yaniemuh19/nodejs-k8s-example:latest
         imagePullPolicy: Always
         env: 
         - name: NODE_PORT
@@ -42,20 +42,20 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: nodejs-argo
+  name: nodejs-cicd
   labels:
-    app: nodejs-argo
+    app: nodejs-cicd
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
+  ingressClassName: nginx
   rules:
+  - host: host1.domain.ext
   - http:
       paths:
-      - path: /nodejs-argo
+      - path: "/"
         pathType: Prefix
         backend:
           service:
-            name: nodejs-argo
+            name: nodejs-cicd
             port:
               number: 80
-
