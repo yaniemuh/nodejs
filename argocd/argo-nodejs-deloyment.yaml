@@ -33,6 +33,7 @@ spec:
       - name: nodejs-argo
         image: yaniemuh19/nodejs-k8s-example:latest
         imagePullPolicy: Always
+        args: ["NODE_PORT=3000"]
         env: 
         - name: NODE_PORT
           value: "3000"
