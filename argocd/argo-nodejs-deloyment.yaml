@@ -50,7 +50,7 @@ spec:
   ingressClassName: nginx
   rules:
   - host: host1.domain.ext
-  - http:
+    http:
       paths:
       - path: "/"
         pathType: Prefix
